@@ -1,20 +1,43 @@
-.traffic-light{
+html, body{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: #393939;
+}
+.traffic-light{
+    background-color: #505050;
     max-width: fit-content;
     padding: 0.5em;
     border-radius: 0.5em;
+    box-shadow: inset 0.1em 0.1em 0.2em #ffffff66, inset -0.1em -0.1em 0.2em #00000066, 0.5em 0.5em 0.8em 0.3em #00000066;
 }
 
 .light {
-    height: 2em;
-    width: 2em;
+    height: 4em;
+    width: 4em;
     border-radius: 50%;
     margin: 0.5em;
+    transition: background-color 0.3s ease;
+    
 }
 
-.red { background-color: red;}
-.yellow { background-color: yellow;}
-.green { background-color: green;}
+.red { background: radial-gradient(#700000,#300000);}
+.yellow { background: radial-gradient(#707000,#303000);}
+.green { background: radial-gradient(#007000,#003000);}
+
+.red-on { 
+    box-shadow: 0em 0em 3em 0.5em #ff000088;
+    background : radial-gradient(#dd0000,#ff0000);
+}
+.yellow-on { 
+    box-shadow: 0em 0em 3em 0.5em #ffff0088;
+    background : radial-gradient(#dddd00, #ffff00);
+}
+.green-on { 
+    box-shadow: 0em 0em 3em 0.5em #00ff0088;
+    background : radial-gradient(#00dd00,#00ff00);
+}
 
 /* 
 
