@@ -1,16 +1,20 @@
 html, body{
     height: 100%;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     background-color: #393939;
 }
+
 .traffic-light{
+    display: flex;
+    flex-direction: column;
     background-color: #505050;
     max-width: fit-content;
     padding: 0.5em;
     border-radius: 0.5em;
-    box-shadow: inset 0.1em 0.1em 0.2em #ffffff66, inset -0.1em -0.1em 0.2em #00000066, 0.5em 0.5em 0.8em 0.3em #00000066;
+    box-shadow: inset 0.1em 0.1em 0.2em #ffffff66, inset -0.1em -0.1em 0.2em #000000aa, 0.5em 0.5em 0.8em 0.3em #000000aa;
 }
 
 .light {
@@ -18,35 +22,61 @@ html, body{
     width: 4em;
     border-radius: 50%;
     margin: 0.5em;
-    transition: background-color 0.3s ease;
-    
+    /* transition: background 0.5s ease; */
 }
 
-.red { background: radial-gradient(#700000,#300000);}
-.yellow { background: radial-gradient(#707000,#303000);}
-.green { background: radial-gradient(#007000,#003000);}
+.red { 
+    background: radial-gradient(#700000,#300000);
+    transition: background-color 1s ease
+}
+.yellow { 
+    background: radial-gradient(#707000,#303000);
+    transition: background-color 1s ease
+}
+.green { 
+    background: radial-gradient(#007000,#003000);
+    transition: background-color 1s ease
+}
+
+.purple { 
+    background: radial-gradient(#700070,#300030);
+    transition: background-color 1s ease
+}
 
 .red-on { 
     box-shadow: 0em 0em 3em 0.5em #ff000088;
     background : radial-gradient(#dd0000,#ff0000);
+    transition: background-color 1s ease
 }
 .yellow-on { 
     box-shadow: 0em 0em 3em 0.5em #ffff0088;
     background : radial-gradient(#dddd00, #ffff00);
+    transition: background-color 1s ease
 }
 .green-on { 
     box-shadow: 0em 0em 3em 0.5em #00ff0088;
     background : radial-gradient(#00dd00,#00ff00);
+    transition: background-color 1s ease
 }
 
-/* 
+.purple-on { 
+    box-shadow: 0em 0em 3em 0.5em #ff00ff88;
+    background : radial-gradient(#dd00dd,#ff00ff);
+    transition: background-color 1s ease
+}
 
-    You can write your own styles here...
-    
-    
-    ...Or you can use the import command to include 
-    other sylesheets into your bunde as well, e.j:
-    
-    import 'relative/path/to/stylesheet.scss';
+.ctrl-button {
+    font-size: 1em;
+    margin: 0.2em;
+    background: radial-gradient(#414141,#1b1b1b);
+    border-radius: 0.3em;
+}
 
-*/
+.ctrl-button-on{
+    font-size: 1em;
+    margin: 0.2em;
+    background: radial-gradient(#bd9206,#331b00 110%);
+    border-radius: 0.3em;
+    box-shadow: 0em 0em 3em 0.5em #83660655;
+}
+
