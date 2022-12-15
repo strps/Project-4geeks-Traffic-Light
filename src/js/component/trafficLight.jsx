@@ -21,7 +21,7 @@ function TrafficLigth(props) {
 
     return (
         <div className="traffic-light">
-            {colors.slice(0, lightsQuantity).map((e, i)=><button className={"light "+ e + ((lightOn == i) ? "-on" : "")} onClick={() => setLightOn(3)}></button>)}
+            {colors.slice(0, lightsQuantity).map((e, i)=><button className={"light "+ e + ((lightOn == i) ? "-on" : "")} onClick={() => setLightOn(i)}></button>)}
             <button className={'ctrl-button' + (cycle ? "-on" : "")} onClick={() => setCycle(cycle ? false : true)}><i className="bi bi-arrow-repeat"></i></button>
             <button className={'ctrl-button' + (lightsQuantity == 4 ? "-on" : "")} onClick={() => setPurple(lightsQuantity == 4? 3 : 4)}><i className="bi bi-plus-lg"></i></button>
         </div>)
